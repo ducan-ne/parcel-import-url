@@ -40,5 +40,7 @@ import('https://$HOST/index.js').then(() => {
 ```
 - Now you can run `HOST=myapp.vercel.app parcel build src/index.html`, your config configurable at build time.
 
+#### Make your remote module callback-able to caller by a trick, without you config name, version, etc. 
+
 ## How to use this
 - TBD
