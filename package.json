@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "files": ["dist/index.js"],
   "scripts": {
     "postinstall": "node ./scripts/tsconfig-to-swcconfig.js",
     "gen": "npm run postinstall",
-    "git-pre-commit": "rome check",
-    "lint": "rome check",
+    "lint": "rome check ./src",
     "build": "swc src -d dist",
     "watch": "swc src --watch -d dist"
   },

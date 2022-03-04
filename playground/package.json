@@ -17,9 +17,5 @@
     "@parcel/core": "^2.3.2",
     "parcel": "^2.3.2",
     "parcel-resolver-import-url": "workspace:*"
-  },
-  "workspaces": [
-    "packages/resolver",
-    "packages/transformer"
-  ]
+  }
 }
