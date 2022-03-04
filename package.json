@@ -32,12 +32,6 @@
   "engines": {
     "parcel": "2.x"
   },
-  "workspaces": [
-    "packages/resolver",
-    "packages/transformer",
-    "packages/config",
-    "packages/runtime"
-  ],
   "dependencies": {
     "@parcel/hash": "^2.3.2",
     "@parcel/plugin": "^2.3.2",
