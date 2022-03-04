@@ -5,6 +5,16 @@ Please take a look at [./playground](./playground), docs will be updated soon
 # Introduction
 - In short, this lib make you able to import dependency by url, like this `import("https://this-is-my-website.vercel.app")`
 
+# Installation
+- Install package `pnpm add parcel-resolver-import-url -D`
+- Add package to `.parcelrc`
+```json
+{
+  "resolvers": ["parcel-resolver-import-url"]
+}
+
+```
+
 # Features
 Currently, only async import supported, but I'm thinking about support normal import
 ```typescript

@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "postinstall": "node ./scripts/tsconfig-to-swcconfig.js",
+    "prepublishOnly": "npm run build",
     "gen": "npm run postinstall",
     "lint": "rome check ./src",
     "build": "swc src -d dist",
