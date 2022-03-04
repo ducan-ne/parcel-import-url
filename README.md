@@ -10,6 +10,7 @@ Please take a look at [./playground](./playground), docs will be updated soon
 - Add package to `.parcelrc`
 ```json
 {
+  ...
   "resolvers": ["parcel-resolver-import-url"]
 }
 
