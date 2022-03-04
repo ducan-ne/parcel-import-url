@@ -15,6 +15,16 @@ Please take a look at [./playground](./playground), docs will be updated soon
 
 ```
 
+- Enable typing by adding 2 line to your `.d.ts` file
+```typescript
+declare module 'http://*' {
+  getMe() // your defination
+}
+declare module 'https://*' {
+  exampleMethod() // your defination
+}
+```
+
 # Features
 Currently, only async import supported, but I'm thinking about support normal import
 ```typescript
