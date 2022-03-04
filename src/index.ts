@@ -1,6 +1,8 @@
 import { Resolver } from '@parcel/plugin'
 import { relativePath } from '@parcel/utils'
+import { hashString } from '@parcel/hash'
 import path from 'path'
+import url from 'url'
 
 declare global {
   interface Window {
@@ -24,15 +26,19 @@ export default new Resolver({
 
       let noFoundEnv
 
-      const url = specifier.replace(/\$(\w+)/, (env) => {
-        // substring: remove $
-        const value = process.env[env.substring(1)]
-        if (!value) {
-          noFoundEnv = env
-          return ''
-        }
-        return value
-      })
+      const target = new URL(
+        specifier.replace(/\$(\w+)/, (env) => {
+          // substring: remove $
+          const value = process.env[env.substring(1)]
+          if (!value) {
+            noFoundEnv = env
+            return ''
+          }
+          return value
+        }),
+      )
+
+      target.searchParams.append('hash', hashString(Date.now().toString()))
 
       if (noFoundEnv) {
         return {
@@ -47,7 +53,7 @@ export default new Resolver({
         filePath: path.resolve(options.projectRoot, 'index.js'),
         code: `
           module.exports = new Promise((resolve) => {
-            fetch("${url}").then(res => res.text())
+            fetch("${target.toString()}").then(res => res.text())
             .then(text => {
               var parcelRemoteModuleCallback = resolve
               eval(\`

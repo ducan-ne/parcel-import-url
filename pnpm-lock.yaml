@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@parcel/core': ^2.3.2
+      '@parcel/hash': ^2.3.2
       '@parcel/plugin': ^2.3.2
       '@parcel/utils': ^2.3.2
       '@swc/cli': ^0.1.55
@@ -17,6 +18,7 @@ importers:
       rome: ^10.0.4-beta
       tsconfig-to-swcconfig: ^1.5.0
     dependencies:
+      '@parcel/hash': 2.3.2
       '@parcel/plugin': 2.3.2_@parcel+core@2.3.2
       '@parcel/utils': 2.3.2
     devDependencies:

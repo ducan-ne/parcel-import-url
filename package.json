@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-  "files": ["dist/index.js"],
+  "files": [
+    "dist/index.js"
+  ],
   "scripts": {
     "postinstall": "node ./scripts/tsconfig-to-swcconfig.js",
     "gen": "npm run postinstall",
@@ -36,6 +38,7 @@
     "packages/runtime"
   ],
   "dependencies": {
+    "@parcel/hash": "^2.3.2",
     "@parcel/plugin": "^2.3.2",
     "@parcel/utils": "^2.3.2"
   }
