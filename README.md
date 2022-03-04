@@ -24,6 +24,9 @@ declare module 'http://*' {
 declare module 'https://*' {
   exampleMethod() // your defination
 }
+declare module 'https://myapp.vercel.app/index.js' {
+  exampleMethod() // your defination
+}
 ```
 
 # Features
