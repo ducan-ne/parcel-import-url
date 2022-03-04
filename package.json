@@ -1,5 +1,5 @@
 {
-  "name": "parcel-resolver-import-url-monorepo",
+  "name": "parcel-resolver-import-url",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
