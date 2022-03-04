@@ -33,17 +33,17 @@ importers:
       rome: 10.0.4-beta
       tsconfig-to-swcconfig: 1.5.0
 
-  packages/resolver:
+  example:
     specifiers:
-      '@parcel/plugin': ^2.3.2
-    dependencies:
-      '@parcel/plugin': 2.3.2_@parcel+core@2.3.2
-
-  packages/transformer:
-    specifiers:
-      '@parcel/plugin': ^2.3.2
-    dependencies:
-      '@parcel/plugin': 2.3.2_@parcel+core@2.3.2
+      '@parcel/config-default': ^2.3.2
+      '@parcel/core': ^2.3.2
+      parcel: ^2.3.2
+      parcel-resolver-import-url: ^1.0.0
+    devDependencies:
+      '@parcel/config-default': 2.3.2_@parcel+core@2.3.2
+      '@parcel/core': 2.3.2
+      parcel: 2.3.2
+      parcel-resolver-import-url: link:..
 
   playground:
     specifiers:
@@ -685,6 +685,17 @@ packages:
       - '@parcel/core'
     dev: true
 
+  /@parcel/types/2.3.2:
+    resolution: {integrity: sha512-C77Ct1xNM7LWjPTfe/dQ/9rq1efdsX5VJu2o8/TVi6qoFh64Wp/c5/vCHwKInOTBZUTchVO6z4PGJNIZoUVJuA==}
+    dependencies:
+      '@parcel/cache': 2.3.2_@parcel+core@2.3.2
+      '@parcel/diagnostic': 2.3.2
+      '@parcel/fs': 2.3.2_@parcel+core@2.3.2
+      '@parcel/package-manager': 2.3.2_@parcel+core@2.3.2
+      '@parcel/source-map': 2.0.2
+      '@parcel/workers': 2.3.2_@parcel+core@2.3.2
+      utility-types: 3.10.0
+
   /@parcel/types/2.3.2_@parcel+core@2.3.2:
     resolution: {integrity: sha512-C77Ct1xNM7LWjPTfe/dQ/9rq1efdsX5VJu2o8/TVi6qoFh64Wp/c5/vCHwKInOTBZUTchVO6z4PGJNIZoUVJuA==}
     dependencies:
@@ -727,7 +738,7 @@ packages:
       '@parcel/core': 2.3.2
       '@parcel/diagnostic': 2.3.2
       '@parcel/logger': 2.3.2
-      '@parcel/types': 2.3.2_@parcel+core@2.3.2
+      '@parcel/types': 2.3.2
       '@parcel/utils': 2.3.2
       chrome-trace-event: 1.0.3
       nullthrows: 1.1.1
