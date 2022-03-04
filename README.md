@@ -46,5 +46,6 @@ import('https://$HOST/index.js').then(() => {
 ### Make your remote module callback-able to caller by a trick, without you config name, version, etc. 
 - But your remote module must be built by this plugin 
 
-## How to use this
-- TBD
+## TODO
+- Support webpack without any config
+- Support vite without any config
