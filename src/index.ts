@@ -31,7 +31,7 @@ export default new Resolver({
         }),
       )
 
-      if (target.searchParams.has('disableHash')) {
+      if (!target.searchParams.has('disableHash')) {
         target.searchParams.append('hash', hashString(Date.now().toString()))
       }
 
