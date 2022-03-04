@@ -1,0 +1,32 @@
+{
+  "sourceMaps": "inline",
+  "module": {
+    "type": "commonjs",
+    "strict": true,
+    "strictMode": true,
+    "noInterop": false
+  },
+  "jsc": {
+    "externalHelpers": false,
+    "target": "es2015",
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "decorators": false,
+      "dynamicImport": true
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": false,
+      "react": {
+        "throwIfNamespace": false,
+        "development": false,
+        "useBuiltins": false,
+        "pragma": "React.createElement",
+        "pragmaFrag": "React.Fragment",
+        "importSource": "react"
+      }
+    },
+    "keepClassNames": false
+  }
+}

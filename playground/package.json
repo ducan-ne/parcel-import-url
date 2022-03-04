@@ -1,0 +1,25 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html --no-cache",
+    "build": "rm -rf dist && parcel build src/index.html --no-cache",
+    "build-remote": "rm -rf remote/dist && parcel build remote/index.js --no-cache --dist-dir remote/dist",
+    "dev-remote": "parcel remote/index.js --no-cache --dist-dir remote/dist -p 3005"
+  },
+  "keywords": [],
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/config-default": "^2.3.2",
+    "@parcel/core": "^2.3.2",
+    "parcel": "^2.3.2",
+    "parcel-resolver-import-url": "workspace:*"
+  },
+  "workspaces": [
+    "packages/resolver",
+    "packages/transformer"
+  ]
+}
