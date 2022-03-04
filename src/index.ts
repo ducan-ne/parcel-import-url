@@ -2,13 +2,6 @@ import { Resolver } from '@parcel/plugin'
 import { relativePath } from '@parcel/utils'
 import { hashString } from '@parcel/hash'
 import path from 'path'
-import url from 'url'
-
-declare global {
-  interface Window {
-    PARCEL_IMPORT_MAP: Record<string, any>;
-  }
-}
 
 export default new Resolver({
   async resolve({ specifier, dependency, options }) {
