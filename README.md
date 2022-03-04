@@ -27,7 +27,7 @@ import('https://$HOST/index.js').then(() => {
   
 })
 ```
-- Now you can run `HOST=myapp.vercel.app parcel build src/index.html`, config can set at build time.
+- Now you can run `HOST=myapp.vercel.app parcel build src/index.html`, your config configurable at build time.
 
 ## How to use this
 - TBD
