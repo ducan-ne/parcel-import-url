@@ -31,7 +31,9 @@ export default new Resolver({
         }),
       )
 
-      target.searchParams.append('hash', hashString(Date.now().toString()))
+      if (target.searchParams.has('disableHash')) {
+        target.searchParams.append('hash', hashString(Date.now().toString()))
+      }
 
       if (noFoundEnv) {
         return {
